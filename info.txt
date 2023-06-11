@@ -1,0 +1,136 @@
+Ejemplos de palabras clave de bloques de código incluyen:
+
+def (funciones)
+if, elif, else (sentencias condicionales)
+for, while (bucles)
+Class (clases)
+
+La primera línea no está indentada, pero termina con dos puntos (:).
+
+Python nos ha provisto de la sentencia pass para situaciones donde
+ sabemos que necesitamos la sentencia block, pero no estamos seguros de qué poner en ella aún.
+
+common functions
+    print(), len(), type()
+
+Python Dictionary Methods
+ https://www.w3schools.com/python/python_ref_dictionary.asp
+
+                	    JavaScript                          Python
+
+int (entero)    	    var num = 35;	                    num = 25
+
+float (decimal) 	    var dec = 4.2;	                    dec = 4.2
+
+log	                    console.log(num);	                print(num)
+
+Verificación de tipo	console.log(typeof(dec));	        print(type(dec))
+
+conversión	N/A.        Todos los números son de punto      num_to_dec = float(num)
+                        flotante en JavaScript
+
+Número aleatorio        var rand_num =              	    import random
+entre 2-5	            Math.floor(Math.random()*4)+2;      rand_num = random.randint(2,5)
+
+NUMEROS COMPLEJOS
+Forman parte del sistema numérico real y, a menudo, se les hace referencia con la letra J.
+ Ejemplo: 1+ 3j. ** Nota ** Si no estás seguro de si necesitas usarlos, es seguro decir que
+ puedes ignorar este tipo de datos.
+
+La siguiente es una lista de métodos de cadenas usados comúnmente:
+string.upper():                 devuelve una copia de la cadena con todos los caracteres en mayúscula.
+string.lower():                 devuelve una copia de la cadena con todos los caracteres en minúscula.
+string.count(substring):        devuelve el número de recurrencias de una subcadena de una cadena.
+string.split(char):             devuelve una lista de valores donde la cadena es dividida en el carácter 
+                                 especificado. Sin un parámetro, la división por defecto se hace en cada espacio.
+string.find(substring):         devuelve el índice del comienzo de la primer recurrencia de la subcadena 
+                                 dentro de una cadena.
+string.isalnum():               devuelve un booleano dependiendo de si la longitud de la cadena es > 0 y todos 
+                                 los caracteres sean alfanuméricos (solo letras y números). Las cadenas que incluyen espacios y 
+                                 puntuación devolverán False con este método. Algunos métodos similares incluyen .isalpha(), 
+                                 .isdigit(), .islower(), .isupper(),  entre otros. Todos devuelven booleanos.
+string.join(list):              devuelve una cadena que contiene todas las cadenas de nuestro conjunto (en 
+                                 este caso, una lista) concatenadas.
+string.endswith(substring):     devuelve un booleano basado en si los últimos caracteres de la 
+                                 cadena coinciden con la subcadena.
+
+
+---------------------------LISTAS
+<list>.append(<new_element>)
+len(<list>)
+
+
+El índice inicial y el índice final deben estar separados por el carácter ":". 
+x = [99,4,2,5,-3]
+print(x[:])             # la salida sería [99,4,2,5,-3]
+print(x[1:])            # la salida sería [4,2,5,-3];
+print(x[:4])            # la salida sería [99,4,2,5]
+print(x[2:4])           # la salida sería [2,5];
+
+Algunas funciones integradas para secuencias:
+
+enumerate(sequence)         utilizado en un contexto de bucle for para devolver una tupla de dos elementos para cada elemento de la lista, indicando el índice seguido del valor en ese índice. 
+map(function, sequence)     aplica la función a cada elemento de la secuencia que pasas. Devuelve una lista de los resultados. 
+min(sequence)               devuelve el valor más bajo de una secuencia. 
+sorted(sequence)            devuelve una secuencia ordenada. 
+Hay algunas otras funciones integradas útiles. Encuéntralas aquí https://docs.python.org/2/library/functions.html. 
+
+Los siguientes son métodos de lista usados comúnmente:
+
+list.extend(list2) agrega todos los valores de una segunda secuencia al final de la secuencia original. 
+list.pop(index) elimina un valor en una posición determinada. Si no pasa ningún parámetro, queda como valor final de la lista. 
+list.index(value) devuelve la posición del índice en una lista para el parámetro dado. 
+http://www.linuxtopia.org/online_books/programming_books/python_programming/python_ch14s07.html
+
+---------------------------TUPLAS
+
+Una tupla es un contenedor para una secuencia fija de objetos de datos.
+
+---------------------------DICCIONARIO
+
+El siguiente es un resumen general de las características de un diccionario de Python:
+
+Un diccionario es una colección desordenada de objetos.
+Se accede a los valores mediante una clave.
+Un diccionario puede encogerse o crecer según sea necesario.
+El contenido de los diccionarios se puede modificar.
+Los diccionarios se pueden anidar.
+Las operaciones de secuencia, como slice, no se pueden utilizar con diccionarios.
+
+Crear diccionarios
+findesemana = {"Dom": "Domingo", "Sáb": "Sábado"} # notación literal
+capitales = {} # crea un diccionario vacío y luego agrega valores
+capitales["svk"] = "Bratislava"
+capitales["deu"] = "Berlin"
+capitales["dnk"] = "Copenhagen"
+
+Acceder a valores
+Para acceder a los valores de un diccionario, puedes utilizar los familiares corchetes junto con la clave para obtener su valor.
+
+print(findesemana["Dom"])
+print(capitales["svk"])
+
+Remover valores
+Hay 2 formas de eliminar un par clave-valor de un diccionario. 
+
+value_removed = capitales.pop('svk') # eliminará la clave 'svk' y devolverá su valor
+del capitales['dnk'] # eliminará la clave y no devolverá nada
+
+cmp(dict1, dict2): compara dos diccionarios. El proceso de comparación comienza con la longitud de cada diccionario, seguido de los 
+nombres de las claves, seguidos de los valores. La función devuelve 0 si los dos diccionarios son iguales, -1 si dict1 > dict2, 1 si dict1 < dict2. 
+
+Python incluye los siguientes métodos de diccionario:
+
+(funcionará dict.method(yourDictionary) o yourDictionary.method())
+
+.clear(): elimina todos los elementos del diccionario 
+.copy() : devuelve un diccionario de copia superficial 
+.fromkeys(sequence, [value] ): crea un nuevo diccionario con claves de secuencia y valores establecidos al valor. 
+.get(key, default=None): para clave, devuelve un valor o default si la clave no está en el diccionario. 
+.has_key(key) : devuelve verdadero si una clave determinada está disponible en el diccionario; de lo contrario, devuelve false. 
+.items(): devuelve una lista de pares de tuplas (clave, valor) del diccionario. 
+.keys(): devuelve una lista de claves de diccionario. 
+.setdefault(key, default=None) : similar a get(), pero establecerá dict[key]=default si la clave no está ya en el diccionario. 
+.update(dict2): agrega pares clave-valor del diccionario dict2 a un diccionario existente. 
+.values(): devuelve una lista de valores del diccionario. 
+
