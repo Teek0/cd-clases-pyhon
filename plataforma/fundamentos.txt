@@ -4,7 +4,6 @@ def (funciones)
 if, elif, else (sentencias condicionales)
 for, while (bucles)
 Class (clases)
-
 La primera línea no está indentada, pero termina con dos puntos (:).
 
 Python nos ha provisto de la sentencia pass para situaciones donde
@@ -134,3 +133,10 @@ Python incluye los siguientes métodos de diccionario:
 .update(dict2): agrega pares clave-valor del diccionario dict2 a un diccionario existente. 
 .values(): devuelve una lista de valores del diccionario. 
 
+-------------------------------------------------------
+
+Beneficios de usar POO:
+Implementa D.R.Y. Código (No te repitas)
+Hace que nuestra aplicación sea escalable.
+Hace que nuestro código sea reutilizable. 
+Hace que nuestras aplicaciones sean fáciles de mantener.
